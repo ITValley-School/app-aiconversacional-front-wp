@@ -1,0 +1,66 @@
+{
+  "settings": {
+    "options": {
+      "path": "/api/azurevideoindexer/upload",
+      "method": "post"
+    }
+  },
+  "meta": {
+    "$_POST": [
+      {
+        "type": "text",
+        "name": "video_name"
+      },
+      {
+        "type": "text",
+        "name": "description"
+      },
+      {
+        "type": "text",
+        "name": "privacy"
+      },
+      {
+        "type": "file",
+        "name": "file",
+        "sub": [
+          {
+            "type": "text",
+            "name": "name"
+          },
+          {
+            "type": "text",
+            "name": "type"
+          },
+          {
+            "type": "number",
+            "name": "size"
+          },
+          {
+            "type": "text",
+            "name": "error"
+          }
+        ],
+        "outputType": "file"
+      }
+    ]
+  },
+  "exec": {
+    "steps": {
+      "name": "api",
+      "module": "api",
+      "action": "send",
+      "options": {
+        "url": "https://app-neo-iaconversacional.azurewebsites.net/api/azurevideoindexer/upload",
+        "method": "POST",
+        "data": {
+          "file": "{{$_POST.file.name}}",
+          "video_name": "{{$_POST.file.name}}",
+          "description": "{{$_POST.description}}",
+          "privacy": "{{$_POST.privacy}}"
+        },
+        "throwErrors": true
+      },
+      "output": true
+    }
+  }
+}

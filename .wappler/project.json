@@ -1,0 +1,137 @@
+{
+  "projectName": "app-aiconversacional-itvs",
+  "styleFile": "/css/style.css",
+  "assetsFolder": "/assets",
+  "designFramework": "bootstrap4",
+  "frameworks": [
+    {
+      "name": "jquery_slim_33",
+      "type": "cdn"
+    },
+    {
+      "name": "fontawesome_4",
+      "type": "cdn"
+    },
+    {
+      "name": "bootstrap4",
+      "type": "local"
+    },
+    {
+      "name": "appConnect",
+      "type": "local"
+    }
+  ],
+  "hostingType": "wappler",
+  "projectServerModel": "node",
+  "runtime": "capacitor",
+  "webRootFolder": "/public",
+  "useRouting": true,
+  "addBase": true,
+  "routingHandler": "node",
+  "projectLinksType": "site",
+  "targets": [
+    {
+      "name": "Development",
+      "remoteURL": "http://localhost:3000",
+      "access": "local",
+      "targetType": "wappler"
+    },
+    {
+      "name": "Azure App Service",
+      "remoteURL": "http://localhost",
+      "targetType": "docker",
+      "webLoggingMaxFiles": "5",
+      "webLoggingMaxFileSize": "10m",
+      "usage": "production",
+      "dockerTimezone": "Etc/UTC",
+      "webServer": "node",
+      "webServerLang": "node",
+      "NodeVersion": "lts",
+      "NodeOS": "alpine",
+      "webServerPort": 80,
+      "databaseConnectionType": "none",
+      "databaseLoggingMaxFiles": "5",
+      "databaseLoggingMaxFileSize": "10m"
+    },
+    {
+      "name": "Hetzner Production",
+      "remoteURL": "http://188.245.114.138",
+      "targetType": "docker",
+      "webLoggingMaxFiles": "5",
+      "webLoggingMaxFileSize": "10m",
+      "databaseLoggingMaxFiles": "5",
+      "databaseLoggingMaxFileSize": "10m",
+      "usage": "production",
+      "dockerType": "remote",
+      "dockerTimezone": "America/Sao_Paulo",
+      "dockerProtocol": "ssh",
+      "webServer": "node",
+      "webServerLang": "node",
+      "NodeVersion": "lts",
+      "NodeOS": "alpine",
+      "databaseType": "mysql",
+      "mySQLVersion": "8.0.x",
+      "dockerHost": "188.245.114.138",
+      "webServerPort": 80,
+      "databasePort": 9906,
+      "mySQL_rootPassword": "Xx1lBsRy",
+      "mySQL_databaseName": "app-aiconversacional-itvs",
+      "mySQL_username": "db_user",
+      "mySQL_password": "Z42JRs4z",
+      "dockerServerName": "hetzner / srv-aiconversacional",
+      "dockerProjectName": "app-aiconversacional-itvs__hetzner_production",
+      "NodeImageType": "slim"
+    }
+  ],
+  "activeTarget": "Development",
+  "projectType": "web",
+  "extensions": [],
+  "resources": {
+    "providers": {
+      "hetzner": {
+        "provider-api-key": "9uLoMBb3EQQWExllFm3U97NWsCyxvvDPNEwztsabL3mI9OmG5exTgqLeWKoPUyIP",
+        "ssh-key-id": 23295825,
+        "ssh-key-file": "/.wappler/.ssh/app-aiconversacional-itvs_ed25519.pub",
+        "ssh_key": {
+          "mozart.marin@gmail.com": {
+            "id": 23199345,
+            "ssh-key-file": "~/.ssh/id_ed25519.pub",
+            "fingerprint": "d5:be:15:a8:2f:22:d5:f1:ae:54:26:c2:78:36:3f:13",
+            "type": "ed25519"
+          },
+          "app-aiconversacional-itvs_ed25519": {
+            "id": 23295825,
+            "ssh-key-file": "/.wappler/.ssh/app-aiconversacional-itvs_ed25519.pub",
+            "fingerprint": "55:d0:3e:b7:84:c5:ff:c8:bf:ee:25:4e:61:ed:9e:9f",
+            "type": "ed25519",
+            "name": "app-aiconversacional-itvs_ed25519"
+          }
+        },
+        "server": {
+          "srv-aiconversacional": {
+            "id": 53665289,
+            "status": "running",
+            "access": false,
+            "ip_address": "188.245.114.138",
+            "location": "Falkenstein DC Park 1",
+            "price": 3.29,
+            "cpu": "Arm64",
+            "cores": 2,
+            "cpu_type": "shared",
+            "memory": 4,
+            "disk": 40,
+            "ssh_keys": [
+              {
+                "id": 23295825,
+                "ssh-key-file": "/.wappler/.ssh/app-aiconversacional-itvs_ed25519.pub",
+                "fingerprint": "55:d0:3e:b7:84:c5:ff:c8:bf:ee:25:4e:61:ed:9e:9f",
+                "type": "ed25519",
+                "name": "app-aiconversacional-itvs_ed25519"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

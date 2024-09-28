@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="ac:route" content="/">
+  <base href="/">
+  <!-- Required meta tags -->
+  <title><%= typeof title !== 'undefined' ? title : 'IAConversacional' %> | IAConversacional</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  <!-- Custom CSS styles -->
+  <style>
+    /* Cores principais */
+    body {
+      background-color: #1c1c1c;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    .navbar {
+      background-color: #1c1c1c;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #ffffff !important;
+    }
+
+    .navbar-brand:hover,
+    .nav-link:hover {
+      color: #6c63ff !important;
+    }
+
+    #page-header {
+      background-color: #1c1c1c;
+      color: #ffffff;
+      padding-top: 100px;
+      min-height: 100vh;
+    }
+
+    .btn-light {
+      background-color: #6c63ff;
+      color: #ffffff;
+      border: none;
+    }
+
+    .btn-light:hover {
+      background-color: #8a85ff;
+      color: #ffffff;
+    }
+
+    #features {
+      background-color: #262626;
+      padding: 60px 0;
+    }
+
+    #features h3 {
+      color: #ffffff;
+    }
+
+    #features .text-info {
+      color: #6c63ff !important;
+    }
+
+    #features .text-muted {
+      color: #b3b3b3 !important;
+    }
+
+    #screenshots {
+      background-color: #1c1c1c;
+      color: #ffffff;
+      padding: 60px 0;
+    }
+
+    #screenshots .btn-primary {
+      background-color: #6c63ff;
+      border-color: #6c63ff;
+    }
+
+    #screenshots .btn-primary:hover {
+      background-color: #8a85ff;
+      border-color: #8a85ff;
+    }
+
+    #faq {
+      background-color: #1c1c1c;
+      color: #ffffff;
+      padding: 60px 0;
+    }
+
+    #faq h2 {
+      color: #6c63ff;
+    }
+
+    #faq p.lead,
+    #faq .text-muted {
+      color: #b3b3b3;
+    }
+
+    footer {
+      background-color: #1c1c1c;
+      color: #ffffff;
+      padding: 20px 0;
+    }
+
+    footer .text-muted {
+      color: #b3b3b3;
+    }
+
+    /* Ajustes de rolagem e margens */
+    html,
+    body {
+      height: 100%;
+    }
+
+    section {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    header {
+      margin-bottom: 60px;
+    }
+
+    .container-fluid {
+      padding: 0 15px;
+    }
+
+    /* Corrigir ocultação de textos */
+    h1,
+    h2,
+    h3,
+    p,
+    li {
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Garantir que o botão não fique escondido */
+    button {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-light navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#page-header">IAConversacional</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a class="nav-link" href="#page-header">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="page-header" class="pb-md-5 pb-5 pb-lg-0">
+    <div class="container">
+      <div class="row">
+        <div id="header-text" class="col-12 col-md-7 col-lg-6">
+          <h1 class="display-4">IAConversacional</h1>
+          <p class="lead">A IAConversacional oferece soluções avançadas para transcrição de vídeos e áudios, utilizando as melhores tecnologias de inteligência artificial, com integração ao Azure e OpenAI.</p>
+          <button type="button" class="btn btn-light">Saiba Mais</button>
+        </div>
+        <div id="header-img" class="col-12 col-md-5 col-lg-6">
+          <img class="img-fluid" src="/assets/images/ia_conversacional.jpg" alt="AI Image">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3 class="section-title">Nossos Serviços</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 text-center py-4">
+          <i class="fa fa-cloud fa-4x text-muted" aria-hidden="true"></i>
+          <h5 class="text-info">
+            <a href="/upload_videos" style="color: #6c63ff;">Upload Video to Azure</a>
+          </h5>
+          <p class="text-muted">Faça o upload de seus vídeos para o Azure com facilidade, prontos para serem processados e transcritos.</p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 text-center py-4">
+          <i class="fa fa-address-book fa-4x text-muted" aria-hidden="true"></i>
+          <h5 class="text-info">
+            <a href="/transcript_total" style="color: #6c63ff;">Transcript Total</a>
+          </h5>
+          <p class="text-muted">Receba transcrições completas de seus vídeos, processadas com precisão pela IA.</p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 text-center py-4">
+          <i class="fa fa-area-chart fa-4x text-muted" aria-hidden="true"></i>
+          <h5 class="text-info">
+            <a href="/transcript_minute" style="color: #6c63ff;">Transcript Minute</a>
+          </h5>
+          <p class="text-muted">Obtenha transcrições minuto a minuto, facilitando a navegação e análise de conteúdo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <h2>FAQs</h2>
+          <p class="lead">Dúvidas sobre como o IAConversacional funciona?</p>
+          <p class="text-muted">Aqui estão as respostas para algumas das perguntas mais comuns que recebemos de nossos clientes.</p>
+        </div>
+        <div class="col-12 col-md-8">
+          <ul class="list list-unstyled">
+            <li>
+              <h5 class="bold">Como funciona o upload de vídeos?</h5>
+              <p class="mt-1">Nosso sistema permite o upload de vídeos para o Azure, onde serão processados e transcritos com rapidez e precisão.</p>
+            </li>
+            <li>
+              <h5 class="bold">O que é a transcrição minuto a minuto?</h5>
+              <p class="mt-1">Com a transcrição minuto a minuto, você pode navegar facilmente por partes específicas do vídeo.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="page-footer">
+    <div class="container">
+      <span class="text-muted">Copyright IT Valley School</span>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+  <!-- Smooth scroll for anchors -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

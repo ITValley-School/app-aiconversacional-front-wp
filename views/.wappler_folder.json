@@ -1,0 +1,6 @@
+{
+  "upload.ejs": {
+    "layoutPage": "layout",
+    "description": "Upload Video to Azure"
+  }
+}

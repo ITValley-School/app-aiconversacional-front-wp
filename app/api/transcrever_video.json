@@ -1,0 +1,107 @@
+{
+  "settings": {
+    "options": {
+      "path": "/api/azurevideoindexer/transcribe-raw",
+      "method": "get"
+    }
+  },
+  "meta": {
+    "$_GET": [
+      {
+        "type": "text",
+        "name": "video_id"
+      }
+    ]
+  },
+  "exec": {
+    "steps": {
+      "name": "api",
+      "module": "api",
+      "action": "send",
+      "options": {
+        "url": "https://app-neo-iaconversacional.azurewebsites.net/api/azurevideoindexer/transcribe-raw",
+        "params": {
+          "video_id": "{{$_GET.video_id}}"
+        },
+        "schema": [
+          {
+            "type": "object",
+            "name": "data",
+            "sub": [
+              {
+                "type": "text",
+                "name": "message"
+              },
+              {
+                "type": "text",
+                "name": "transcricao"
+              }
+            ]
+          },
+          {
+            "type": "object",
+            "name": "headers",
+            "sub": [
+              {
+                "type": "text",
+                "name": "content-length"
+              },
+              {
+                "type": "text",
+                "name": "content-type"
+              },
+              {
+                "type": "text",
+                "name": "date"
+              },
+              {
+                "type": "text",
+                "name": "server"
+              }
+            ]
+          }
+        ]
+      },
+      "output": true,
+      "meta": [
+        {
+          "type": "object",
+          "name": "data",
+          "sub": [
+            {
+              "type": "text",
+              "name": "message"
+            },
+            {
+              "type": "text",
+              "name": "transcricao"
+            }
+          ]
+        },
+        {
+          "type": "object",
+          "name": "headers",
+          "sub": [
+            {
+              "type": "text",
+              "name": "content-length"
+            },
+            {
+              "type": "text",
+              "name": "content-type"
+            },
+            {
+              "type": "text",
+              "name": "date"
+            },
+            {
+              "type": "text",
+              "name": "server"
+            }
+          ]
+        }
+      ],
+      "outputType": "object"
+    }
+  }
+}

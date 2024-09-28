@@ -1,0 +1,3455 @@
+{
+  "settings": {
+    "options": {
+      "path": "/api/azurevideoindexer/transcribe",
+      "method": "get"
+    }
+  },
+  "meta": {
+    "$_GET": [
+      {
+        "type": "text",
+        "name": "video_id"
+      }
+    ]
+  },
+  "exec": {
+    "steps": {
+      "name": "api_minuto",
+      "module": "api",
+      "action": "send",
+      "options": {
+        "url": "https://app-neo-iaconversacional.azurewebsites.net/api/azurevideoindexer/transcribe",
+        "schema": [
+          {
+            "type": "object",
+            "name": "data",
+            "sub": [
+              {
+                "type": "text",
+                "name": "message"
+              },
+              {
+                "type": "object",
+                "name": "transcricao",
+                "sub": [
+                  {
+                    "type": "text",
+                    "name": "partition"
+                  },
+                  {
+                    "type": "text",
+                    "name": "description"
+                  },
+                  {
+                    "type": "text",
+                    "name": "privacyMode"
+                  },
+                  {
+                    "type": "text",
+                    "name": "state"
+                  },
+                  {
+                    "type": "text",
+                    "name": "accountId"
+                  },
+                  {
+                    "type": "text",
+                    "name": "id"
+                  },
+                  {
+                    "type": "text",
+                    "name": "name"
+                  },
+                  {
+                    "type": "text",
+                    "name": "userName"
+                  },
+                  {
+                    "type": "text",
+                    "name": "created"
+                  },
+                  {
+                    "type": "boolean",
+                    "name": "isOwned"
+                  },
+                  {
+                    "type": "boolean",
+                    "name": "isEditable"
+                  },
+                  {
+                    "type": "boolean",
+                    "name": "isBase"
+                  },
+                  {
+                    "type": "number",
+                    "name": "durationInSeconds"
+                  },
+                  {
+                    "type": "text",
+                    "name": "duration"
+                  },
+                  {
+                    "type": "object",
+                    "name": "summarizedInsights",
+                    "sub": [
+                      {
+                        "type": "text",
+                        "name": "name"
+                      },
+                      {
+                        "type": "text",
+                        "name": "id"
+                      },
+                      {
+                        "type": "text",
+                        "name": "privacyMode"
+                      },
+                      {
+                        "type": "object",
+                        "name": "duration",
+                        "sub": [
+                          {
+                            "type": "text",
+                            "name": "time"
+                          },
+                          {
+                            "type": "number",
+                            "name": "seconds"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "name": "thumbnailVideoId"
+                      },
+                      {
+                        "type": "text",
+                        "name": "thumbnailId"
+                      },
+                      {
+                        "type": "array",
+                        "name": "faces"
+                      },
+                      {
+                        "type": "array",
+                        "name": "keywords",
+                        "sub": [
+                          {
+                            "type": "boolean",
+                            "name": "isTranscript"
+                          },
+                          {
+                            "type": "number",
+                            "name": "id"
+                          },
+                          {
+                            "type": "text",
+                            "name": "name"
+                          },
+                          {
+                            "type": "array",
+                            "name": "appearances",
+                            "sub": [
+                              {
+                                "type": "text",
+                                "name": "startTime"
+                              },
+                              {
+                                "type": "text",
+                                "name": "endTime"
+                              },
+                              {
+                                "type": "number",
+                                "name": "startSeconds"
+                              },
+                              {
+                                "type": "number",
+                                "name": "endSeconds"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "array",
+                        "name": "sentiments",
+                        "sub": [
+                          {
+                            "type": "text",
+                            "name": "sentimentKey"
+                          },
+                          {
+                            "type": "number",
+                            "name": "seenDurationRatio"
+                          },
+                          {
+                            "type": "array",
+                            "name": "appearances",
+                            "sub": [
+                              {
+                                "type": "text",
+                                "name": "startTime"
+                              },
+                              {
+                                "type": "text",
+                                "name": "endTime"
+                              },
+                              {
+                                "type": "number",
+                                "name": "startSeconds"
+                              },
+                              {
+                                "type": "number",
+                                "name": "endSeconds"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "array",
+                        "name": "emotions"
+                      },
+                      {
+                        "type": "array",
+                        "name": "audioEffects",
+                        "sub": [
+                          {
+                            "type": "text",
+                            "name": "audioEffectKey"
+                          },
+                          {
+                            "type": "number",
+                            "name": "seenDurationRatio"
+                          },
+                          {
+                            "type": "number",
+                            "name": "seenDuration"
+                          },
+                          {
+                            "type": "array",
+                            "name": "appearances",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "confidence"
+                              },
+                              {
+                                "type": "text",
+                                "name": "startTime"
+                              },
+                              {
+                                "type": "text",
+                                "name": "endTime"
+                              },
+                              {
+                                "type": "number",
+                                "name": "startSeconds"
+                              },
+                              {
+                                "type": "number",
+                                "name": "endSeconds"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "array",
+                        "name": "labels",
+                        "sub": [
+                          {
+                            "type": "number",
+                            "name": "id"
+                          },
+                          {
+                            "type": "text",
+                            "name": "name"
+                          },
+                          {
+                            "type": "array",
+                            "name": "appearances",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "confidence"
+                              },
+                              {
+                                "type": "text",
+                                "name": "startTime"
+                              },
+                              {
+                                "type": "text",
+                                "name": "endTime"
+                              },
+                              {
+                                "type": "number",
+                                "name": "startSeconds"
+                              },
+                              {
+                                "type": "number",
+                                "name": "endSeconds"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "array",
+                        "name": "framePatterns",
+                        "sub": [
+                          {
+                            "type": "text",
+                            "name": "displayName"
+                          },
+                          {
+                            "type": "number",
+                            "name": "id"
+                          },
+                          {
+                            "type": "text",
+                            "name": "name"
+                          },
+                          {
+                            "type": "array",
+                            "name": "appearances",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "confidence"
+                              },
+                              {
+                                "type": "text",
+                                "name": "startTime"
+                              },
+                              {
+                                "type": "text",
+                                "name": "endTime"
+                              },
+                              {
+                                "type": "number",
+                                "name": "startSeconds"
+                              },
+                              {
+                                "type": "number",
+                                "name": "endSeconds"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "array",
+                        "name": "brands",
+                        "sub": [
+                          {
+                            "type": "text",
+                            "name": "referenceId"
+                          },
+                          {
+                            "type": "text",
+                            "name": "referenceUrl"
+                          },
+                          {
+                            "type": "number",
+                            "name": "confidence"
+                          },
+                          {
+                            "type": "text",
+                            "name": "description"
+                          },
+                          {
+                            "type": "number",
+                            "name": "seenDuration"
+                          },
+                          {
+                            "type": "number",
+                            "name": "id"
+                          },
+                          {
+                            "type": "text",
+                            "name": "name"
+                          },
+                          {
+                            "type": "array",
+                            "name": "appearances",
+                            "sub": [
+                              {
+                                "type": "text",
+                                "name": "startTime"
+                              },
+                              {
+                                "type": "text",
+                                "name": "endTime"
+                              },
+                              {
+                                "type": "number",
+                                "name": "startSeconds"
+                              },
+                              {
+                                "type": "number",
+                                "name": "endSeconds"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "array",
+                        "name": "namedLocations",
+                        "sub": [
+                          {
+                            "type": "text",
+                            "name": "referenceId"
+                          },
+                          {
+                            "type": "text",
+                            "name": "referenceUrl"
+                          },
+                          {
+                            "type": "number",
+                            "name": "confidence"
+                          },
+                          {
+                            "type": "text",
+                            "name": "description"
+                          },
+                          {
+                            "type": "number",
+                            "name": "seenDuration"
+                          },
+                          {
+                            "type": "number",
+                            "name": "id"
+                          },
+                          {
+                            "type": "text",
+                            "name": "name"
+                          },
+                          {
+                            "type": "array",
+                            "name": "appearances",
+                            "sub": [
+                              {
+                                "type": "text",
+                                "name": "startTime"
+                              },
+                              {
+                                "type": "text",
+                                "name": "endTime"
+                              },
+                              {
+                                "type": "number",
+                                "name": "startSeconds"
+                              },
+                              {
+                                "type": "number",
+                                "name": "endSeconds"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "array",
+                        "name": "namedPeople",
+                        "sub": [
+                          {
+                            "type": "text",
+                            "name": "referenceId"
+                          },
+                          {
+                            "type": "text",
+                            "name": "referenceUrl"
+                          },
+                          {
+                            "type": "number",
+                            "name": "confidence"
+                          },
+                          {
+                            "type": "text",
+                            "name": "description"
+                          },
+                          {
+                            "type": "number",
+                            "name": "seenDuration"
+                          },
+                          {
+                            "type": "number",
+                            "name": "id"
+                          },
+                          {
+                            "type": "text",
+                            "name": "name"
+                          },
+                          {
+                            "type": "array",
+                            "name": "appearances",
+                            "sub": [
+                              {
+                                "type": "text",
+                                "name": "startTime"
+                              },
+                              {
+                                "type": "text",
+                                "name": "endTime"
+                              },
+                              {
+                                "type": "number",
+                                "name": "startSeconds"
+                              },
+                              {
+                                "type": "number",
+                                "name": "endSeconds"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "object",
+                        "name": "statistics",
+                        "sub": [
+                          {
+                            "type": "number",
+                            "name": "correspondenceCount"
+                          },
+                          {
+                            "type": "object",
+                            "name": "speakerTalkToListenRatio",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "1"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "name": "speakerLongestMonolog",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "1"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "name": "speakerNumberOfFragments",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "1"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "name": "speakerWordCount",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "1"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "array",
+                        "name": "topics",
+                        "sub": [
+                          {
+                            "type": "text",
+                            "name": "referenceUrl"
+                          },
+                          {
+                            "type": "text",
+                            "name": "iptcName"
+                          },
+                          {
+                            "type": "text",
+                            "name": "iabName"
+                          },
+                          {
+                            "type": "number",
+                            "name": "confidence"
+                          },
+                          {
+                            "type": "number",
+                            "name": "id"
+                          },
+                          {
+                            "type": "text",
+                            "name": "name"
+                          },
+                          {
+                            "type": "array",
+                            "name": "appearances",
+                            "sub": [
+                              {
+                                "type": "text",
+                                "name": "startTime"
+                              },
+                              {
+                                "type": "text",
+                                "name": "endTime"
+                              },
+                              {
+                                "type": "number",
+                                "name": "startSeconds"
+                              },
+                              {
+                                "type": "number",
+                                "name": "endSeconds"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "array",
+                    "name": "videos",
+                    "sub": [
+                      {
+                        "type": "text",
+                        "name": "accountId"
+                      },
+                      {
+                        "type": "text",
+                        "name": "id"
+                      },
+                      {
+                        "type": "text",
+                        "name": "state"
+                      },
+                      {
+                        "type": "text",
+                        "name": "moderationState"
+                      },
+                      {
+                        "type": "text",
+                        "name": "reviewState"
+                      },
+                      {
+                        "type": "text",
+                        "name": "privacyMode"
+                      },
+                      {
+                        "type": "text",
+                        "name": "processingProgress"
+                      },
+                      {
+                        "type": "text",
+                        "name": "failureMessage"
+                      },
+                      {
+                        "type": "text",
+                        "name": "externalId"
+                      },
+                      {
+                        "type": "text",
+                        "name": "externalUrl"
+                      },
+                      {
+                        "type": "text",
+                        "name": "metadata"
+                      },
+                      {
+                        "type": "object",
+                        "name": "insights",
+                        "sub": [
+                          {
+                            "type": "text",
+                            "name": "version"
+                          },
+                          {
+                            "type": "text",
+                            "name": "duration"
+                          },
+                          {
+                            "type": "text",
+                            "name": "sourceLanguage"
+                          },
+                          {
+                            "type": "array",
+                            "name": "sourceLanguages",
+                            "sub": [
+                              {
+                                "type": "text",
+                                "name": "$value"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "text",
+                            "name": "language"
+                          },
+                          {
+                            "type": "array",
+                            "name": "languages",
+                            "sub": [
+                              {
+                                "type": "text",
+                                "name": "$value"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "array",
+                            "name": "transcript",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "id"
+                              },
+                              {
+                                "type": "text",
+                                "name": "text"
+                              },
+                              {
+                                "type": "number",
+                                "name": "confidence"
+                              },
+                              {
+                                "type": "number",
+                                "name": "speakerId"
+                              },
+                              {
+                                "type": "text",
+                                "name": "language"
+                              },
+                              {
+                                "type": "array",
+                                "name": "instances",
+                                "sub": [
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedStart"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedEnd"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "start"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "end"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "array",
+                            "name": "ocr",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "id"
+                              },
+                              {
+                                "type": "text",
+                                "name": "text"
+                              },
+                              {
+                                "type": "number",
+                                "name": "confidence"
+                              },
+                              {
+                                "type": "number",
+                                "name": "left"
+                              },
+                              {
+                                "type": "number",
+                                "name": "top"
+                              },
+                              {
+                                "type": "number",
+                                "name": "width"
+                              },
+                              {
+                                "type": "number",
+                                "name": "height"
+                              },
+                              {
+                                "type": "number",
+                                "name": "angle"
+                              },
+                              {
+                                "type": "text",
+                                "name": "language"
+                              },
+                              {
+                                "type": "array",
+                                "name": "instances",
+                                "sub": [
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedStart"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedEnd"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "start"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "end"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "array",
+                            "name": "keywords",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "id"
+                              },
+                              {
+                                "type": "text",
+                                "name": "text"
+                              },
+                              {
+                                "type": "number",
+                                "name": "confidence"
+                              },
+                              {
+                                "type": "text",
+                                "name": "language"
+                              },
+                              {
+                                "type": "array",
+                                "name": "instances",
+                                "sub": [
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedStart"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedEnd"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "start"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "end"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "array",
+                            "name": "topics",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "id"
+                              },
+                              {
+                                "type": "text",
+                                "name": "name"
+                              },
+                              {
+                                "type": "text",
+                                "name": "referenceId"
+                              },
+                              {
+                                "type": "text",
+                                "name": "fullName"
+                              },
+                              {
+                                "type": "text",
+                                "name": "referenceType"
+                              },
+                              {
+                                "type": "text",
+                                "name": "iptcName"
+                              },
+                              {
+                                "type": "number",
+                                "name": "confidence"
+                              },
+                              {
+                                "type": "text",
+                                "name": "iabName"
+                              },
+                              {
+                                "type": "text",
+                                "name": "language"
+                              },
+                              {
+                                "type": "array",
+                                "name": "instances",
+                                "sub": [
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedStart"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedEnd"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "start"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "end"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "array",
+                            "name": "labels",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "id"
+                              },
+                              {
+                                "type": "text",
+                                "name": "name"
+                              },
+                              {
+                                "type": "text",
+                                "name": "language"
+                              },
+                              {
+                                "type": "array",
+                                "name": "instances",
+                                "sub": [
+                                  {
+                                    "type": "number",
+                                    "name": "confidence"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedStart"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedEnd"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "start"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "end"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "array",
+                            "name": "scenes",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "id"
+                              },
+                              {
+                                "type": "array",
+                                "name": "instances",
+                                "sub": [
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedStart"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedEnd"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "start"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "end"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "array",
+                            "name": "shots",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "id"
+                              },
+                              {
+                                "type": "array",
+                                "name": "keyFrames",
+                                "sub": [
+                                  {
+                                    "type": "number",
+                                    "name": "id"
+                                  },
+                                  {
+                                    "type": "array",
+                                    "name": "instances",
+                                    "sub": [
+                                      {
+                                        "type": "text",
+                                        "name": "thumbnailId"
+                                      },
+                                      {
+                                        "type": "text",
+                                        "name": "adjustedStart"
+                                      },
+                                      {
+                                        "type": "text",
+                                        "name": "adjustedEnd"
+                                      },
+                                      {
+                                        "type": "text",
+                                        "name": "start"
+                                      },
+                                      {
+                                        "type": "text",
+                                        "name": "end"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "array",
+                                "name": "instances",
+                                "sub": [
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedStart"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedEnd"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "start"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "end"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "array",
+                            "name": "brands",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "id"
+                              },
+                              {
+                                "type": "text",
+                                "name": "referenceType"
+                              },
+                              {
+                                "type": "text",
+                                "name": "name"
+                              },
+                              {
+                                "type": "text",
+                                "name": "referenceId"
+                              },
+                              {
+                                "type": "text",
+                                "name": "referenceUrl"
+                              },
+                              {
+                                "type": "text",
+                                "name": "description"
+                              },
+                              {
+                                "type": "array",
+                                "name": "tags"
+                              },
+                              {
+                                "type": "number",
+                                "name": "confidence"
+                              },
+                              {
+                                "type": "boolean",
+                                "name": "isCustom"
+                              },
+                              {
+                                "type": "array",
+                                "name": "instances",
+                                "sub": [
+                                  {
+                                    "type": "text",
+                                    "name": "brandType"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "instanceSource"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedStart"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedEnd"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "start"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "end"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "array",
+                            "name": "namedLocations",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "id"
+                              },
+                              {
+                                "type": "text",
+                                "name": "name"
+                              },
+                              {
+                                "type": "text",
+                                "name": "referenceId"
+                              },
+                              {
+                                "type": "text",
+                                "name": "referenceUrl"
+                              },
+                              {
+                                "type": "text",
+                                "name": "description"
+                              },
+                              {
+                                "type": "array",
+                                "name": "tags"
+                              },
+                              {
+                                "type": "number",
+                                "name": "confidence"
+                              },
+                              {
+                                "type": "boolean",
+                                "name": "isCustom"
+                              },
+                              {
+                                "type": "array",
+                                "name": "instances",
+                                "sub": [
+                                  {
+                                    "type": "text",
+                                    "name": "instanceSource"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedStart"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedEnd"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "start"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "end"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "array",
+                            "name": "namedPeople",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "id"
+                              },
+                              {
+                                "type": "text",
+                                "name": "name"
+                              },
+                              {
+                                "type": "text",
+                                "name": "referenceId"
+                              },
+                              {
+                                "type": "text",
+                                "name": "referenceUrl"
+                              },
+                              {
+                                "type": "text",
+                                "name": "description"
+                              },
+                              {
+                                "type": "array",
+                                "name": "tags"
+                              },
+                              {
+                                "type": "number",
+                                "name": "confidence"
+                              },
+                              {
+                                "type": "boolean",
+                                "name": "isCustom"
+                              },
+                              {
+                                "type": "array",
+                                "name": "instances",
+                                "sub": [
+                                  {
+                                    "type": "text",
+                                    "name": "instanceSource"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedStart"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedEnd"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "start"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "end"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "array",
+                            "name": "audioEffects",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "id"
+                              },
+                              {
+                                "type": "text",
+                                "name": "type"
+                              },
+                              {
+                                "type": "array",
+                                "name": "instances",
+                                "sub": [
+                                  {
+                                    "type": "number",
+                                    "name": "confidence"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedStart"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedEnd"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "start"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "end"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "array",
+                            "name": "detectedObjects",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "id"
+                              },
+                              {
+                                "type": "text",
+                                "name": "type"
+                              },
+                              {
+                                "type": "text",
+                                "name": "thumbnailId"
+                              },
+                              {
+                                "type": "text",
+                                "name": "displayName"
+                              },
+                              {
+                                "type": "text",
+                                "name": "wikiDataId"
+                              },
+                              {
+                                "type": "array",
+                                "name": "instances",
+                                "sub": [
+                                  {
+                                    "type": "number",
+                                    "name": "confidence"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedStart"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedEnd"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "start"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "end"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "array",
+                            "name": "sentiments",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "id"
+                              },
+                              {
+                                "type": "number",
+                                "name": "averageScore"
+                              },
+                              {
+                                "type": "text",
+                                "name": "sentimentType"
+                              },
+                              {
+                                "type": "array",
+                                "name": "instances",
+                                "sub": [
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedStart"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedEnd"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "start"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "end"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "array",
+                            "name": "blocks",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "id"
+                              },
+                              {
+                                "type": "array",
+                                "name": "instances",
+                                "sub": [
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedStart"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedEnd"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "start"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "end"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "array",
+                            "name": "framePatterns",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "id"
+                              },
+                              {
+                                "type": "text",
+                                "name": "patternType"
+                              },
+                              {
+                                "type": "number",
+                                "name": "confidence"
+                              },
+                              {
+                                "type": "text",
+                                "name": "displayName"
+                              },
+                              {
+                                "type": "array",
+                                "name": "instances",
+                                "sub": [
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedStart"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedEnd"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "start"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "end"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "array",
+                            "name": "speakers",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "id"
+                              },
+                              {
+                                "type": "text",
+                                "name": "name"
+                              },
+                              {
+                                "type": "array",
+                                "name": "instances",
+                                "sub": [
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedStart"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "adjustedEnd"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "start"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "name": "end"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "name": "textualContentModeration",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "id"
+                              },
+                              {
+                                "type": "number",
+                                "name": "bannedWordsCount"
+                              },
+                              {
+                                "type": "number",
+                                "name": "bannedWordsRatio"
+                              },
+                              {
+                                "type": "array",
+                                "name": "instances"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "name": "statistics",
+                            "sub": [
+                              {
+                                "type": "number",
+                                "name": "correspondenceCount"
+                              },
+                              {
+                                "type": "object",
+                                "name": "speakerTalkToListenRatio",
+                                "sub": [
+                                  {
+                                    "type": "number",
+                                    "name": "1"
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "object",
+                                "name": "speakerLongestMonolog",
+                                "sub": [
+                                  {
+                                    "type": "number",
+                                    "name": "1"
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "object",
+                                "name": "speakerNumberOfFragments",
+                                "sub": [
+                                  {
+                                    "type": "number",
+                                    "name": "1"
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "object",
+                                "name": "speakerWordCount",
+                                "sub": [
+                                  {
+                                    "type": "number",
+                                    "name": "1"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "name": "thumbnailId"
+                      },
+                      {
+                        "type": "number",
+                        "name": "width"
+                      },
+                      {
+                        "type": "number",
+                        "name": "height"
+                      },
+                      {
+                        "type": "boolean",
+                        "name": "detectSourceLanguage"
+                      },
+                      {
+                        "type": "text",
+                        "name": "languageAutoDetectMode"
+                      },
+                      {
+                        "type": "text",
+                        "name": "sourceLanguage"
+                      },
+                      {
+                        "type": "array",
+                        "name": "sourceLanguages",
+                        "sub": [
+                          {
+                            "type": "text",
+                            "name": "$value"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "name": "language"
+                      },
+                      {
+                        "type": "array",
+                        "name": "languages",
+                        "sub": [
+                          {
+                            "type": "text",
+                            "name": "$value"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "name": "indexingPreset"
+                      },
+                      {
+                        "type": "text",
+                        "name": "streamingPreset"
+                      },
+                      {
+                        "type": "text",
+                        "name": "linguisticModelId"
+                      },
+                      {
+                        "type": "text",
+                        "name": "personModelId"
+                      },
+                      {
+                        "type": "text",
+                        "name": "logoGroupId"
+                      },
+                      {
+                        "type": "boolean",
+                        "name": "isAdult"
+                      },
+                      {
+                        "type": "array",
+                        "name": "excludedAIs",
+                        "sub": [
+                          {
+                            "type": "text",
+                            "name": "$value"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "boolean",
+                        "name": "isSearchable"
+                      },
+                      {
+                        "type": "text",
+                        "name": "publishedUrl"
+                      },
+                      {
+                        "type": "text",
+                        "name": "publishedProxyUrl"
+                      },
+                      {
+                        "type": "text",
+                        "name": "viewToken"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "array",
+                    "name": "videosRanges",
+                    "sub": [
+                      {
+                        "type": "text",
+                        "name": "videoId"
+                      },
+                      {
+                        "type": "object",
+                        "name": "range",
+                        "sub": [
+                          {
+                            "type": "text",
+                            "name": "start"
+                          },
+                          {
+                            "type": "text",
+                            "name": "end"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "object",
+            "name": "headers",
+            "sub": [
+              {
+                "type": "text",
+                "name": "content-length"
+              },
+              {
+                "type": "text",
+                "name": "content-type"
+              },
+              {
+                "type": "text",
+                "name": "date"
+              },
+              {
+                "type": "text",
+                "name": "server"
+              }
+            ]
+          }
+        ],
+        "params": {
+          "video_id": "{{$_GET.video_id}}"
+        }
+      },
+      "output": true,
+      "meta": [
+        {
+          "type": "object",
+          "name": "data",
+          "sub": [
+            {
+              "type": "text",
+              "name": "message"
+            },
+            {
+              "type": "object",
+              "name": "transcricao",
+              "sub": [
+                {
+                  "type": "text",
+                  "name": "partition"
+                },
+                {
+                  "type": "text",
+                  "name": "description"
+                },
+                {
+                  "type": "text",
+                  "name": "privacyMode"
+                },
+                {
+                  "type": "text",
+                  "name": "state"
+                },
+                {
+                  "type": "text",
+                  "name": "accountId"
+                },
+                {
+                  "type": "text",
+                  "name": "id"
+                },
+                {
+                  "type": "text",
+                  "name": "name"
+                },
+                {
+                  "type": "text",
+                  "name": "userName"
+                },
+                {
+                  "type": "text",
+                  "name": "created"
+                },
+                {
+                  "type": "boolean",
+                  "name": "isOwned"
+                },
+                {
+                  "type": "boolean",
+                  "name": "isEditable"
+                },
+                {
+                  "type": "boolean",
+                  "name": "isBase"
+                },
+                {
+                  "type": "number",
+                  "name": "durationInSeconds"
+                },
+                {
+                  "type": "text",
+                  "name": "duration"
+                },
+                {
+                  "type": "object",
+                  "name": "summarizedInsights",
+                  "sub": [
+                    {
+                      "type": "text",
+                      "name": "name"
+                    },
+                    {
+                      "type": "text",
+                      "name": "id"
+                    },
+                    {
+                      "type": "text",
+                      "name": "privacyMode"
+                    },
+                    {
+                      "type": "object",
+                      "name": "duration",
+                      "sub": [
+                        {
+                          "type": "text",
+                          "name": "time"
+                        },
+                        {
+                          "type": "number",
+                          "name": "seconds"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "name": "thumbnailVideoId"
+                    },
+                    {
+                      "type": "text",
+                      "name": "thumbnailId"
+                    },
+                    {
+                      "type": "array",
+                      "name": "faces"
+                    },
+                    {
+                      "type": "array",
+                      "name": "keywords",
+                      "sub": [
+                        {
+                          "type": "boolean",
+                          "name": "isTranscript"
+                        },
+                        {
+                          "type": "number",
+                          "name": "id"
+                        },
+                        {
+                          "type": "text",
+                          "name": "name"
+                        },
+                        {
+                          "type": "array",
+                          "name": "appearances",
+                          "sub": [
+                            {
+                              "type": "text",
+                              "name": "startTime"
+                            },
+                            {
+                              "type": "text",
+                              "name": "endTime"
+                            },
+                            {
+                              "type": "number",
+                              "name": "startSeconds"
+                            },
+                            {
+                              "type": "number",
+                              "name": "endSeconds"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "array",
+                      "name": "sentiments",
+                      "sub": [
+                        {
+                          "type": "text",
+                          "name": "sentimentKey"
+                        },
+                        {
+                          "type": "number",
+                          "name": "seenDurationRatio"
+                        },
+                        {
+                          "type": "array",
+                          "name": "appearances",
+                          "sub": [
+                            {
+                              "type": "text",
+                              "name": "startTime"
+                            },
+                            {
+                              "type": "text",
+                              "name": "endTime"
+                            },
+                            {
+                              "type": "number",
+                              "name": "startSeconds"
+                            },
+                            {
+                              "type": "number",
+                              "name": "endSeconds"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "array",
+                      "name": "emotions"
+                    },
+                    {
+                      "type": "array",
+                      "name": "audioEffects",
+                      "sub": [
+                        {
+                          "type": "text",
+                          "name": "audioEffectKey"
+                        },
+                        {
+                          "type": "number",
+                          "name": "seenDurationRatio"
+                        },
+                        {
+                          "type": "number",
+                          "name": "seenDuration"
+                        },
+                        {
+                          "type": "array",
+                          "name": "appearances",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "confidence"
+                            },
+                            {
+                              "type": "text",
+                              "name": "startTime"
+                            },
+                            {
+                              "type": "text",
+                              "name": "endTime"
+                            },
+                            {
+                              "type": "number",
+                              "name": "startSeconds"
+                            },
+                            {
+                              "type": "number",
+                              "name": "endSeconds"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "array",
+                      "name": "labels",
+                      "sub": [
+                        {
+                          "type": "number",
+                          "name": "id"
+                        },
+                        {
+                          "type": "text",
+                          "name": "name"
+                        },
+                        {
+                          "type": "array",
+                          "name": "appearances",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "confidence"
+                            },
+                            {
+                              "type": "text",
+                              "name": "startTime"
+                            },
+                            {
+                              "type": "text",
+                              "name": "endTime"
+                            },
+                            {
+                              "type": "number",
+                              "name": "startSeconds"
+                            },
+                            {
+                              "type": "number",
+                              "name": "endSeconds"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "array",
+                      "name": "framePatterns",
+                      "sub": [
+                        {
+                          "type": "text",
+                          "name": "displayName"
+                        },
+                        {
+                          "type": "number",
+                          "name": "id"
+                        },
+                        {
+                          "type": "text",
+                          "name": "name"
+                        },
+                        {
+                          "type": "array",
+                          "name": "appearances",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "confidence"
+                            },
+                            {
+                              "type": "text",
+                              "name": "startTime"
+                            },
+                            {
+                              "type": "text",
+                              "name": "endTime"
+                            },
+                            {
+                              "type": "number",
+                              "name": "startSeconds"
+                            },
+                            {
+                              "type": "number",
+                              "name": "endSeconds"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "array",
+                      "name": "brands",
+                      "sub": [
+                        {
+                          "type": "text",
+                          "name": "referenceId"
+                        },
+                        {
+                          "type": "text",
+                          "name": "referenceUrl"
+                        },
+                        {
+                          "type": "number",
+                          "name": "confidence"
+                        },
+                        {
+                          "type": "text",
+                          "name": "description"
+                        },
+                        {
+                          "type": "number",
+                          "name": "seenDuration"
+                        },
+                        {
+                          "type": "number",
+                          "name": "id"
+                        },
+                        {
+                          "type": "text",
+                          "name": "name"
+                        },
+                        {
+                          "type": "array",
+                          "name": "appearances",
+                          "sub": [
+                            {
+                              "type": "text",
+                              "name": "startTime"
+                            },
+                            {
+                              "type": "text",
+                              "name": "endTime"
+                            },
+                            {
+                              "type": "number",
+                              "name": "startSeconds"
+                            },
+                            {
+                              "type": "number",
+                              "name": "endSeconds"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "array",
+                      "name": "namedLocations",
+                      "sub": [
+                        {
+                          "type": "text",
+                          "name": "referenceId"
+                        },
+                        {
+                          "type": "text",
+                          "name": "referenceUrl"
+                        },
+                        {
+                          "type": "number",
+                          "name": "confidence"
+                        },
+                        {
+                          "type": "text",
+                          "name": "description"
+                        },
+                        {
+                          "type": "number",
+                          "name": "seenDuration"
+                        },
+                        {
+                          "type": "number",
+                          "name": "id"
+                        },
+                        {
+                          "type": "text",
+                          "name": "name"
+                        },
+                        {
+                          "type": "array",
+                          "name": "appearances",
+                          "sub": [
+                            {
+                              "type": "text",
+                              "name": "startTime"
+                            },
+                            {
+                              "type": "text",
+                              "name": "endTime"
+                            },
+                            {
+                              "type": "number",
+                              "name": "startSeconds"
+                            },
+                            {
+                              "type": "number",
+                              "name": "endSeconds"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "array",
+                      "name": "namedPeople",
+                      "sub": [
+                        {
+                          "type": "text",
+                          "name": "referenceId"
+                        },
+                        {
+                          "type": "text",
+                          "name": "referenceUrl"
+                        },
+                        {
+                          "type": "number",
+                          "name": "confidence"
+                        },
+                        {
+                          "type": "text",
+                          "name": "description"
+                        },
+                        {
+                          "type": "number",
+                          "name": "seenDuration"
+                        },
+                        {
+                          "type": "number",
+                          "name": "id"
+                        },
+                        {
+                          "type": "text",
+                          "name": "name"
+                        },
+                        {
+                          "type": "array",
+                          "name": "appearances",
+                          "sub": [
+                            {
+                              "type": "text",
+                              "name": "startTime"
+                            },
+                            {
+                              "type": "text",
+                              "name": "endTime"
+                            },
+                            {
+                              "type": "number",
+                              "name": "startSeconds"
+                            },
+                            {
+                              "type": "number",
+                              "name": "endSeconds"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "name": "statistics",
+                      "sub": [
+                        {
+                          "type": "number",
+                          "name": "correspondenceCount"
+                        },
+                        {
+                          "type": "object",
+                          "name": "speakerTalkToListenRatio",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "1"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "name": "speakerLongestMonolog",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "1"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "name": "speakerNumberOfFragments",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "1"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "name": "speakerWordCount",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "1"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "array",
+                      "name": "topics",
+                      "sub": [
+                        {
+                          "type": "text",
+                          "name": "referenceUrl"
+                        },
+                        {
+                          "type": "text",
+                          "name": "iptcName"
+                        },
+                        {
+                          "type": "text",
+                          "name": "iabName"
+                        },
+                        {
+                          "type": "number",
+                          "name": "confidence"
+                        },
+                        {
+                          "type": "number",
+                          "name": "id"
+                        },
+                        {
+                          "type": "text",
+                          "name": "name"
+                        },
+                        {
+                          "type": "array",
+                          "name": "appearances",
+                          "sub": [
+                            {
+                              "type": "text",
+                              "name": "startTime"
+                            },
+                            {
+                              "type": "text",
+                              "name": "endTime"
+                            },
+                            {
+                              "type": "number",
+                              "name": "startSeconds"
+                            },
+                            {
+                              "type": "number",
+                              "name": "endSeconds"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "array",
+                  "name": "videos",
+                  "sub": [
+                    {
+                      "type": "text",
+                      "name": "accountId"
+                    },
+                    {
+                      "type": "text",
+                      "name": "id"
+                    },
+                    {
+                      "type": "text",
+                      "name": "state"
+                    },
+                    {
+                      "type": "text",
+                      "name": "moderationState"
+                    },
+                    {
+                      "type": "text",
+                      "name": "reviewState"
+                    },
+                    {
+                      "type": "text",
+                      "name": "privacyMode"
+                    },
+                    {
+                      "type": "text",
+                      "name": "processingProgress"
+                    },
+                    {
+                      "type": "text",
+                      "name": "failureMessage"
+                    },
+                    {
+                      "type": "text",
+                      "name": "externalId"
+                    },
+                    {
+                      "type": "text",
+                      "name": "externalUrl"
+                    },
+                    {
+                      "type": "text",
+                      "name": "metadata"
+                    },
+                    {
+                      "type": "object",
+                      "name": "insights",
+                      "sub": [
+                        {
+                          "type": "text",
+                          "name": "version"
+                        },
+                        {
+                          "type": "text",
+                          "name": "duration"
+                        },
+                        {
+                          "type": "text",
+                          "name": "sourceLanguage"
+                        },
+                        {
+                          "type": "array",
+                          "name": "sourceLanguages",
+                          "sub": [
+                            {
+                              "type": "text",
+                              "name": "$value"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "name": "language"
+                        },
+                        {
+                          "type": "array",
+                          "name": "languages",
+                          "sub": [
+                            {
+                              "type": "text",
+                              "name": "$value"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "array",
+                          "name": "transcript",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "id"
+                            },
+                            {
+                              "type": "text",
+                              "name": "text"
+                            },
+                            {
+                              "type": "number",
+                              "name": "confidence"
+                            },
+                            {
+                              "type": "number",
+                              "name": "speakerId"
+                            },
+                            {
+                              "type": "text",
+                              "name": "language"
+                            },
+                            {
+                              "type": "array",
+                              "name": "instances",
+                              "sub": [
+                                {
+                                  "type": "text",
+                                  "name": "adjustedStart"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "adjustedEnd"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "start"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "end"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "array",
+                          "name": "ocr",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "id"
+                            },
+                            {
+                              "type": "text",
+                              "name": "text"
+                            },
+                            {
+                              "type": "number",
+                              "name": "confidence"
+                            },
+                            {
+                              "type": "number",
+                              "name": "left"
+                            },
+                            {
+                              "type": "number",
+                              "name": "top"
+                            },
+                            {
+                              "type": "number",
+                              "name": "width"
+                            },
+                            {
+                              "type": "number",
+                              "name": "height"
+                            },
+                            {
+                              "type": "number",
+                              "name": "angle"
+                            },
+                            {
+                              "type": "text",
+                              "name": "language"
+                            },
+                            {
+                              "type": "array",
+                              "name": "instances",
+                              "sub": [
+                                {
+                                  "type": "text",
+                                  "name": "adjustedStart"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "adjustedEnd"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "start"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "end"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "array",
+                          "name": "keywords",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "id"
+                            },
+                            {
+                              "type": "text",
+                              "name": "text"
+                            },
+                            {
+                              "type": "number",
+                              "name": "confidence"
+                            },
+                            {
+                              "type": "text",
+                              "name": "language"
+                            },
+                            {
+                              "type": "array",
+                              "name": "instances",
+                              "sub": [
+                                {
+                                  "type": "text",
+                                  "name": "adjustedStart"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "adjustedEnd"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "start"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "end"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "array",
+                          "name": "topics",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "id"
+                            },
+                            {
+                              "type": "text",
+                              "name": "name"
+                            },
+                            {
+                              "type": "text",
+                              "name": "referenceId"
+                            },
+                            {
+                              "type": "text",
+                              "name": "fullName"
+                            },
+                            {
+                              "type": "text",
+                              "name": "referenceType"
+                            },
+                            {
+                              "type": "text",
+                              "name": "iptcName"
+                            },
+                            {
+                              "type": "number",
+                              "name": "confidence"
+                            },
+                            {
+                              "type": "text",
+                              "name": "iabName"
+                            },
+                            {
+                              "type": "text",
+                              "name": "language"
+                            },
+                            {
+                              "type": "array",
+                              "name": "instances",
+                              "sub": [
+                                {
+                                  "type": "text",
+                                  "name": "adjustedStart"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "adjustedEnd"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "start"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "end"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "array",
+                          "name": "labels",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "id"
+                            },
+                            {
+                              "type": "text",
+                              "name": "name"
+                            },
+                            {
+                              "type": "text",
+                              "name": "language"
+                            },
+                            {
+                              "type": "array",
+                              "name": "instances",
+                              "sub": [
+                                {
+                                  "type": "number",
+                                  "name": "confidence"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "adjustedStart"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "adjustedEnd"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "start"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "end"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "array",
+                          "name": "scenes",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "id"
+                            },
+                            {
+                              "type": "array",
+                              "name": "instances",
+                              "sub": [
+                                {
+                                  "type": "text",
+                                  "name": "adjustedStart"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "adjustedEnd"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "start"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "end"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "array",
+                          "name": "shots",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "id"
+                            },
+                            {
+                              "type": "array",
+                              "name": "keyFrames",
+                              "sub": [
+                                {
+                                  "type": "number",
+                                  "name": "id"
+                                },
+                                {
+                                  "type": "array",
+                                  "name": "instances",
+                                  "sub": [
+                                    {
+                                      "type": "text",
+                                      "name": "thumbnailId"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "name": "adjustedStart"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "name": "adjustedEnd"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "name": "start"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "name": "end"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "array",
+                              "name": "instances",
+                              "sub": [
+                                {
+                                  "type": "text",
+                                  "name": "adjustedStart"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "adjustedEnd"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "start"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "end"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "array",
+                          "name": "brands",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "id"
+                            },
+                            {
+                              "type": "text",
+                              "name": "referenceType"
+                            },
+                            {
+                              "type": "text",
+                              "name": "name"
+                            },
+                            {
+                              "type": "text",
+                              "name": "referenceId"
+                            },
+                            {
+                              "type": "text",
+                              "name": "referenceUrl"
+                            },
+                            {
+                              "type": "text",
+                              "name": "description"
+                            },
+                            {
+                              "type": "array",
+                              "name": "tags"
+                            },
+                            {
+                              "type": "number",
+                              "name": "confidence"
+                            },
+                            {
+                              "type": "boolean",
+                              "name": "isCustom"
+                            },
+                            {
+                              "type": "array",
+                              "name": "instances",
+                              "sub": [
+                                {
+                                  "type": "text",
+                                  "name": "brandType"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "instanceSource"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "adjustedStart"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "adjustedEnd"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "start"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "end"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "array",
+                          "name": "namedLocations",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "id"
+                            },
+                            {
+                              "type": "text",
+                              "name": "name"
+                            },
+                            {
+                              "type": "text",
+                              "name": "referenceId"
+                            },
+                            {
+                              "type": "text",
+                              "name": "referenceUrl"
+                            },
+                            {
+                              "type": "text",
+                              "name": "description"
+                            },
+                            {
+                              "type": "array",
+                              "name": "tags"
+                            },
+                            {
+                              "type": "number",
+                              "name": "confidence"
+                            },
+                            {
+                              "type": "boolean",
+                              "name": "isCustom"
+                            },
+                            {
+                              "type": "array",
+                              "name": "instances",
+                              "sub": [
+                                {
+                                  "type": "text",
+                                  "name": "instanceSource"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "adjustedStart"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "adjustedEnd"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "start"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "end"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "array",
+                          "name": "namedPeople",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "id"
+                            },
+                            {
+                              "type": "text",
+                              "name": "name"
+                            },
+                            {
+                              "type": "text",
+                              "name": "referenceId"
+                            },
+                            {
+                              "type": "text",
+                              "name": "referenceUrl"
+                            },
+                            {
+                              "type": "text",
+                              "name": "description"
+                            },
+                            {
+                              "type": "array",
+                              "name": "tags"
+                            },
+                            {
+                              "type": "number",
+                              "name": "confidence"
+                            },
+                            {
+                              "type": "boolean",
+                              "name": "isCustom"
+                            },
+                            {
+                              "type": "array",
+                              "name": "instances",
+                              "sub": [
+                                {
+                                  "type": "text",
+                                  "name": "instanceSource"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "adjustedStart"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "adjustedEnd"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "start"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "end"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "array",
+                          "name": "audioEffects",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "id"
+                            },
+                            {
+                              "type": "text",
+                              "name": "type"
+                            },
+                            {
+                              "type": "array",
+                              "name": "instances",
+                              "sub": [
+                                {
+                                  "type": "number",
+                                  "name": "confidence"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "adjustedStart"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "adjustedEnd"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "start"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "end"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "array",
+                          "name": "detectedObjects",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "id"
+                            },
+                            {
+                              "type": "text",
+                              "name": "type"
+                            },
+                            {
+                              "type": "text",
+                              "name": "thumbnailId"
+                            },
+                            {
+                              "type": "text",
+                              "name": "displayName"
+                            },
+                            {
+                              "type": "text",
+                              "name": "wikiDataId"
+                            },
+                            {
+                              "type": "array",
+                              "name": "instances",
+                              "sub": [
+                                {
+                                  "type": "number",
+                                  "name": "confidence"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "adjustedStart"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "adjustedEnd"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "start"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "end"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "array",
+                          "name": "sentiments",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "id"
+                            },
+                            {
+                              "type": "number",
+                              "name": "averageScore"
+                            },
+                            {
+                              "type": "text",
+                              "name": "sentimentType"
+                            },
+                            {
+                              "type": "array",
+                              "name": "instances",
+                              "sub": [
+                                {
+                                  "type": "text",
+                                  "name": "adjustedStart"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "adjustedEnd"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "start"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "end"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "array",
+                          "name": "blocks",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "id"
+                            },
+                            {
+                              "type": "array",
+                              "name": "instances",
+                              "sub": [
+                                {
+                                  "type": "text",
+                                  "name": "adjustedStart"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "adjustedEnd"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "start"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "end"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "array",
+                          "name": "framePatterns",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "id"
+                            },
+                            {
+                              "type": "text",
+                              "name": "patternType"
+                            },
+                            {
+                              "type": "number",
+                              "name": "confidence"
+                            },
+                            {
+                              "type": "text",
+                              "name": "displayName"
+                            },
+                            {
+                              "type": "array",
+                              "name": "instances",
+                              "sub": [
+                                {
+                                  "type": "text",
+                                  "name": "adjustedStart"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "adjustedEnd"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "start"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "end"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "array",
+                          "name": "speakers",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "id"
+                            },
+                            {
+                              "type": "text",
+                              "name": "name"
+                            },
+                            {
+                              "type": "array",
+                              "name": "instances",
+                              "sub": [
+                                {
+                                  "type": "text",
+                                  "name": "adjustedStart"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "adjustedEnd"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "start"
+                                },
+                                {
+                                  "type": "text",
+                                  "name": "end"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "name": "textualContentModeration",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "id"
+                            },
+                            {
+                              "type": "number",
+                              "name": "bannedWordsCount"
+                            },
+                            {
+                              "type": "number",
+                              "name": "bannedWordsRatio"
+                            },
+                            {
+                              "type": "array",
+                              "name": "instances"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "name": "statistics",
+                          "sub": [
+                            {
+                              "type": "number",
+                              "name": "correspondenceCount"
+                            },
+                            {
+                              "type": "object",
+                              "name": "speakerTalkToListenRatio",
+                              "sub": [
+                                {
+                                  "type": "number",
+                                  "name": "1"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "object",
+                              "name": "speakerLongestMonolog",
+                              "sub": [
+                                {
+                                  "type": "number",
+                                  "name": "1"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "object",
+                              "name": "speakerNumberOfFragments",
+                              "sub": [
+                                {
+                                  "type": "number",
+                                  "name": "1"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "object",
+                              "name": "speakerWordCount",
+                              "sub": [
+                                {
+                                  "type": "number",
+                                  "name": "1"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "name": "thumbnailId"
+                    },
+                    {
+                      "type": "number",
+                      "name": "width"
+                    },
+                    {
+                      "type": "number",
+                      "name": "height"
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "detectSourceLanguage"
+                    },
+                    {
+                      "type": "text",
+                      "name": "languageAutoDetectMode"
+                    },
+                    {
+                      "type": "text",
+                      "name": "sourceLanguage"
+                    },
+                    {
+                      "type": "array",
+                      "name": "sourceLanguages",
+                      "sub": [
+                        {
+                          "type": "text",
+                          "name": "$value"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "name": "language"
+                    },
+                    {
+                      "type": "array",
+                      "name": "languages",
+                      "sub": [
+                        {
+                          "type": "text",
+                          "name": "$value"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "name": "indexingPreset"
+                    },
+                    {
+                      "type": "text",
+                      "name": "streamingPreset"
+                    },
+                    {
+                      "type": "text",
+                      "name": "linguisticModelId"
+                    },
+                    {
+                      "type": "text",
+                      "name": "personModelId"
+                    },
+                    {
+                      "type": "text",
+                      "name": "logoGroupId"
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "isAdult"
+                    },
+                    {
+                      "type": "array",
+                      "name": "excludedAIs",
+                      "sub": [
+                        {
+                          "type": "text",
+                          "name": "$value"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "isSearchable"
+                    },
+                    {
+                      "type": "text",
+                      "name": "publishedUrl"
+                    },
+                    {
+                      "type": "text",
+                      "name": "publishedProxyUrl"
+                    },
+                    {
+                      "type": "text",
+                      "name": "viewToken"
+                    }
+                  ]
+                },
+                {
+                  "type": "array",
+                  "name": "videosRanges",
+                  "sub": [
+                    {
+                      "type": "text",
+                      "name": "videoId"
+                    },
+                    {
+                      "type": "object",
+                      "name": "range",
+                      "sub": [
+                        {
+                          "type": "text",
+                          "name": "start"
+                        },
+                        {
+                          "type": "text",
+                          "name": "end"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "object",
+          "name": "headers",
+          "sub": [
+            {
+              "type": "text",
+              "name": "content-length"
+            },
+            {
+              "type": "text",
+              "name": "content-type"
+            },
+            {
+              "type": "text",
+              "name": "date"
+            },
+            {
+              "type": "text",
+              "name": "server"
+            }
+          ]
+        }
+      ],
+      "outputType": "object"
+    }
+  }
+}

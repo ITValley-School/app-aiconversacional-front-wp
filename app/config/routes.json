@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "path": "/transcript_total",
+      "page": "transcript_total"
+    },
+    {
+      "path": "/upload_videos",
+      "page": "upload_videos"
+    },
+    {
+      "path": "/",
+      "page": "index"
+    },
+    {
+      "path": "/transcript_minute",
+      "page": "transcript_minute"
+    }
+  ]
+}
