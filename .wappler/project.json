@@ -37,23 +37,6 @@
       "targetType": "wappler"
     },
     {
-      "name": "Azure App Service",
-      "remoteURL": "http://localhost",
-      "targetType": "docker",
-      "webLoggingMaxFiles": "5",
-      "webLoggingMaxFileSize": "10m",
-      "usage": "production",
-      "dockerTimezone": "Etc/UTC",
-      "webServer": "node",
-      "webServerLang": "node",
-      "NodeVersion": "lts",
-      "NodeOS": "alpine",
-      "webServerPort": 80,
-      "databaseConnectionType": "none",
-      "databaseLoggingMaxFiles": "5",
-      "databaseLoggingMaxFileSize": "10m"
-    },
-    {
       "name": "Hetzner Production",
       "remoteURL": "http://188.245.114.138",
       "targetType": "docker",
@@ -114,6 +97,15 @@
                 "name": "app-aiconversacional-itvs_ed25519"
               }
             ]
+          }
+        },
+        "ssh_key": {
+          "app-aiconversacional-itvs_ed25519": {
+            "ssh-key-file": "/.wappler/.ssh/app-aiconversacional-itvs_ed25519.pub",
+            "name": "app-aiconversacional-itvs_ed25519",
+            "type": "ed25519",
+            "fingerprint": "55:d0:3e:b7:84:c5:ff:c8:bf:ee:25:4e:61:ed:9e:9f",
+            "id": 23295825
           }
         }
       }
