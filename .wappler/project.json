@@ -92,21 +92,6 @@
         "provider-api-key": "9uLoMBb3EQQWExllFm3U97NWsCyxvvDPNEwztsabL3mI9OmG5exTgqLeWKoPUyIP",
         "ssh-key-id": 23295825,
         "ssh-key-file": "/.wappler/.ssh/app-aiconversacional-itvs_ed25519.pub",
-        "ssh_key": {
-          "mozart.marin@gmail.com": {
-            "id": 23199345,
-            "ssh-key-file": "~/.ssh/id_ed25519.pub",
-            "fingerprint": "d5:be:15:a8:2f:22:d5:f1:ae:54:26:c2:78:36:3f:13",
-            "type": "ed25519"
-          },
-          "app-aiconversacional-itvs_ed25519": {
-            "id": 23295825,
-            "ssh-key-file": "/.wappler/.ssh/app-aiconversacional-itvs_ed25519.pub",
-            "fingerprint": "55:d0:3e:b7:84:c5:ff:c8:bf:ee:25:4e:61:ed:9e:9f",
-            "type": "ed25519",
-            "name": "app-aiconversacional-itvs_ed25519"
-          }
-        },
         "server": {
           "srv-aiconversacional": {
             "id": 53665289,
